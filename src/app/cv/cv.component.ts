@@ -13,8 +13,10 @@ selectedPersonne : Personne;
 
   ngOnInit() {
     this.personnes = [
-      new Personne(1, 'titi', 'toto', 23, 'avatar.jpg', 777, 'dev junior'),
-      new Personne(2, 'minet', 'mini', 30, 'femme_voilee2.png', 888, 'dev')
+      new Personne(1, 'nana', 'lor', 23, 'avatar1.png', 777, 'développeuse web'),
+      new Personne(2, 'lola', 'tor', 30, 'avatar2.jpeg', 888, 'assistante manager'),
+      new Personne(3, 'alexis', 'dupont', 40, 'avatar3.jpg', 555, 'serveur'),
+      new Personne(3, 'charles', 'devot', 37, 'man-avatar.jpg', 333, 'électricien')
     ]
   }
 
