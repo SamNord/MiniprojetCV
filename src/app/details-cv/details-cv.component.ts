@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Personne } from '../Models/personne';
+import { Recette } from '../Models/recette';
 
 @Component({
   selector: 'app-details-cv',
@@ -7,7 +7,7 @@ import { Personne } from '../Models/personne';
   styleUrls: ['./details-cv.component.css']
 })
 export class DetailsCvComponent implements OnInit {
-@Input() personne : Personne;
+@Input() personne : Recette;
   constructor() { }
 
   ngOnInit() {

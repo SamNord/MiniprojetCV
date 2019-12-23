@@ -7,6 +7,8 @@ import { CVComponent } from './cv/cv.component';
 import { ItemCVComponent } from './item-cv/item-cv.component';
 import { DetailsCvComponent } from './details-cv/details-cv.component';
 import { ListCVComponent } from './list-cv/list-cv.component';
+import { FormsAddComponent } from './forms-add/forms-add.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,14 @@ import { ListCVComponent } from './list-cv/list-cv.component';
     CVComponent,
     ItemCVComponent,
     DetailsCvComponent,
-    ListCVComponent
+    ListCVComponent,
+    FormsAddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

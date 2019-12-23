@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Personne } from '../Models/personne';
+import { Personne } from '../Models/recette';
 
 @Component({
   selector: 'app-item-cv',
