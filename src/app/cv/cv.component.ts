@@ -8,16 +8,16 @@ import { DataService } from '../data.service';
   styleUrls: ['./cv.component.css']
 })
 export class CVComponent implements OnInit {
-personnes : Recette [];
-selectedPersonne : Recette;
+recipes : Recette [];
+selectedR : Recette;
   constructor(private data : DataService) { }
 
   ngOnInit() {
- this.personnes = this.data.personnes;
+ this.recipes = this.data.recipes;
   }
 
-  selectPersonne(rec)  {
-this.selectedPersonne = rec;
+  selectRecipe(rec)  {
+this.selectedR = rec;
 
   }
 

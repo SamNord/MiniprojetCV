@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Personne } from '../Models/recette';
+import { Recette } from '../Models/recette';
 
 @Component({
   selector: 'app-list-cv',
@@ -7,15 +7,15 @@ import { Personne } from '../Models/recette';
   styleUrls: ['./list-cv.component.css']
 })
 export class ListCVComponent implements OnInit {
-@Input() personne : Personne;
-@Output() selectedPerson = new EventEmitter();
+@Input() recette : Recette;
+@Output() selectedRecipe = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
-  selectPersonne = (selectedPerson) => {
-this.selectedPerson.emit(selectedPerson);
+  selecRecipe = (recipe) => {
+this.selectedRecipe.emit(recipe);
   }
 
 }
