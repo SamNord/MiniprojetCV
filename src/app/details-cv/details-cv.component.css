@@ -1,0 +1,14 @@
+.front, .back {
+    background-color: bisque;
+  
+}
+
+.name {
+    color: #7C360B;
+    font-weight: bold;
+}
+
+h5, h4 {
+    color: #9A3D5C;
+    font-weight: bold;
+}

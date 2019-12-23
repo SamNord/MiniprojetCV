@@ -8,14 +8,14 @@
                 <!-- <div class="user">
                     <img class="img-circle" src="{{ recipe.path }}">
                 </div> -->
-                <div class="container-fluid">
+                <div class="container">
                     <div class="main">
-                        <h3 class="name">{{ recipe.title }}</h3>
+                        <h1 class="name">{{ recipe.title }}</h1>
                         <h5>Composition</h5>
-                        <div *ngFor='let p of recipe.composition'>
-                            <div  class="d-flex flex-wrap"> - {{p}}</div>
+                        <div class="row" *ngFor='let p of recipe.composition'>
+                            <div class="col d-flex flex-wrap"> - {{p}}</div>
                         </div>
-                      
+
                     </div>
                     <!-- <div class="footer">
                         <i class="fa fa-mail-forward"></i> Auto Rotation
@@ -24,22 +24,20 @@
             </div> <!-- end front panel -->
             <div class="back">
                 <div class="header">
-                    <h3>Préparation</h3>
+                    <h4>Préparation</h4>
                 </div>
                 <div class="content">
                     <div class="main">
-                     
+
                         <p class="text-center">{{recipe.texte}}</p>
 
-             
+
 
                     </div>
                 </div>
                 <div class="footer">
                     <div class="social-links text-center">
-                        <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
-                        <a href="https://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
-                        <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                        <h3>Bon appétit !</h3>
                     </div>
                 </div>
             </div> <!-- end back panel -->
