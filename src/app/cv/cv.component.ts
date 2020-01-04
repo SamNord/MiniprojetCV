@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Recette } from '../Models/recette';
 import { DataService } from '../data.service';
+import { Cover } from '../Models/image';
 
 @Component({
   selector: 'app-cv',
@@ -8,27 +9,46 @@ import { DataService } from '../data.service';
   styleUrls: ['./cv.component.css']
 })
 export class CVComponent implements OnInit {
-recipes : Recette [];
-selectedR : Recette[];
-  constructor(private data : DataService) { }
+  recipes: Recette[];
+  covers: Cover[];
+  selectedR: Recette[];
+  selectedCover: Cover[];
+ 
+  constructor(private data: DataService) { }
 
   ngOnInit() {
-    
+   
+
     this.data.getFiche().subscribe(
       (response) => {
-        // return this.http.get(this.link);
+
         this.recipes = response;
       },
       (error) => {
         return this.data.recipes;
       }
-    ) 
- 
+    )
+
+
+    this.data.getCover().subscribe(
+      (response) => {
+
+        this.covers = response;
+      },
+      (error) => {
+        return 'error !';
+      }
+    )
+
   }
 
-  selectRecipe(rec)  {
-this.selectedR = rec;
+  selectRecipe(rec: Recette[]) {
+    this.selectedR = rec;
 
+  }
+
+  selectCover(cov) {
+    this.selectedCover = cov;
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recette } from '../Models/recette';
+import { Cover } from '../Models/image';
 
 @Component({
   selector: 'app-details-cv',
@@ -8,10 +9,12 @@ import { Recette } from '../Models/recette';
 })
 export class DetailsCvComponent implements OnInit {
 @Input() recipe : Recette[];
+@Input() image : Cover[];
   constructor() { }
 
   ngOnInit() {
-    console.log(this.recipe)
+    console.log(this.recipe);
+    console.log(this.image);
   }
 
 }

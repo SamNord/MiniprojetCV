@@ -1,8 +1,11 @@
 <div class="row">
-    <div class="col-md-4 col-sm-3">
-        <app-list-cv (selectedRecipe)= "selectRecipe($event)" [recette]= "recipes"></app-list-cv>
+    <div class="col-2 col-md-4 col-sm-3">
+        <app-list-cv 
+        (selectedRecipe)= "selectRecipe($event)" [recette]= "recipes"
+        (selectedCov) = "selectCover($event)" [cov] ="covers">
+        </app-list-cv>
     </div>
-    <div class="col-md-8 col-sm-9">
-        <app-details-cv [recipe] = "selectedR"></app-details-cv>
+    <div class="col-10 col-md-8 col-sm-9">
+        <app-details-cv [recipe] = "selectedR" [image]="selectedCover"></app-details-cv>
     </div>
 </div>

@@ -2,7 +2,7 @@
     <div class="col col-md">
         <div class="row">
             <div class="col col-md-10 offset-3">
-                <h1>Ajouter une image</h1>
+                <h1>Ajouter un fichier</h1>
             </div>
         </div>
 
@@ -11,7 +11,7 @@
                 <form>
                     <div class="row">
                         <label class="col-4 col-md-3">Votre fichier : </label>
-                        <input class="form-control col-8 col-md-7" #file type="file" (change)="UploadImg(file.files)" />
+                        <input class="form-control col-8 col-md-7" #file type="file" (change)="UploadFile(file.files)" />
                     </div>
                     <div class="row">
                         <label class="col-4 col-md-3">Titre : </label>

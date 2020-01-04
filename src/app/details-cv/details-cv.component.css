@@ -12,3 +12,21 @@ h5, h4 {
     color: #9A3D5C;
     font-weight: bold;
 }
+
+h1 {
+    font-size: 70px;
+}
+
+img {
+    height:400px;
+     width:400px;
+}
+
+.carte {
+    height: 100%;
+}
+
+.cover {
+    background-color: brown;
+}
+

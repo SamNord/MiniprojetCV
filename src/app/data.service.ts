@@ -3,6 +3,7 @@ import { Recette } from './Models/recette';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Subject, Observable } from 'rxjs';
+import { Cover } from './Models/image';
 
 @Injectable({
   providedIn: 'root'
@@ -27,12 +28,34 @@ export class DataService {
   ]
 
   urlBase = "http://localhost:52268/fiche";
+  urlBase2 = "http://localhost:52268/cover";
+  url = "http://localhost:52268";
   obsEnvoi = new Subject<any>();
   constructor(private http : HttpClient) { }
 
 
   getFiche(): Observable<Recette[]> {
     return this.http.get<Recette[]>(this.urlBase);
+  }
+
+  
+  getCover(): Observable<Cover[]> {
+    return this.http.get<Cover[]>(this.urlBase2);
+  }
+
+  postApi = (link, data) => {
+    return this.http.post(this.url + link,data);
+  }
+
+  upload = (url, formdata) => {
+    //pour envoyer une requete vers une api protegée par un jwt, il faut ajouter dans l'entete de la requete l'authorization avec le token
+    const headers = new HttpHeaders({
+      /******pas mettre car affiche erreur */
+      // "Content-type": "multipart/form-data"
+      // "Authorization": "Bearer "+localStorage.getItem("token")
+    });
+    //reportProgress => pour ecouter la progression de l'upload; observe => pour ecouter la totalité de l'event et non uniquement la réponse du serveur
+    return this.http.post(this.url + '/' + url, formdata, { headers: headers, reportProgress: true, observe: 'events' });
   }
 }
 
