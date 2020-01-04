@@ -3,17 +3,19 @@
         <div class="card">
             <div class="front">
                 <div class="cover">
-                    <img class="img-circle" src="{{ recipe.path }}">
+                    <h1 class="name">{{ recipe.title }}</h1>
+
                 </div>
                 <!-- <div class="user">
                     <img class="img-circle" src="{{ recipe.path }}">
                 </div> -->
                 <div class="container">
                     <div class="main">
-                        <h1 class="name">{{ recipe.title }}</h1>
-                        <h5>Composition</h5>
-                        <div class="row" *ngFor='let p of recipe.composition'>
-                            <div class="col d-flex flex-wrap"> - {{p}}</div>
+
+                        <div class="row">
+                            <div class="col d-flex flex-wrap mt-3 justify-content-center">
+                                <img src="{{ recipe.urlFile }}" height="300px" width="300px" alt="">
+                            </div>
                         </div>
 
                     </div>
@@ -24,12 +26,12 @@
             </div> <!-- end front panel -->
             <div class="back">
                 <div class="header">
-                    <h4>Préparation</h4>
+
                 </div>
                 <div class="content">
                     <div class="main">
 
-                        <p class="text-center">{{recipe.texte}}</p>
+                        <!-- <p class="text-center">{{recipe.texte}}</p> -->
 
 
 

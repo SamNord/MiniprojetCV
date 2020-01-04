@@ -9,6 +9,8 @@ import { DetailsCvComponent } from './details-cv/details-cv.component';
 import { ListCVComponent } from './list-cv/list-cv.component';
 import { FormsAddComponent } from './forms-add/forms-add.component';
 import { DataService } from './data.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { DataService } from './data.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

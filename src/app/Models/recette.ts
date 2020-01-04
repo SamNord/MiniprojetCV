@@ -1,21 +1,16 @@
 export class Recette {
 id;
 title;
-composition;
-etape;
-texte;
-path;
+urlFile;
+
 
 //composition --> tableau de string
 //etape -- tableau de int
-constructor(id = 0, title = '', composition = [], texte = "", path = '' ) 
+constructor(id = 0, title = '', urlFile = '' ) 
 {
 this.id = id;
 this.title = title;
-this.composition = composition;
-this.texte = texte;
-
-this.path = path;
+this.urlFile = urlFile;
 
 }
 }

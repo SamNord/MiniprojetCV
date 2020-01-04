@@ -9,11 +9,21 @@ import { DataService } from '../data.service';
 })
 export class CVComponent implements OnInit {
 recipes : Recette [];
-selectedR : Recette;
+selectedR : Recette[];
   constructor(private data : DataService) { }
 
   ngOnInit() {
- this.recipes = this.data.recipes;
+    
+    this.data.getFiche().subscribe(
+      (response) => {
+        // return this.http.get(this.link);
+        this.recipes = response;
+      },
+      (error) => {
+        return this.data.recipes;
+      }
+    ) 
+ 
   }
 
   selectRecipe(rec)  {

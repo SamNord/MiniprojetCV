@@ -7,10 +7,11 @@ import { Recette } from '../Models/recette';
   styleUrls: ['./details-cv.component.css']
 })
 export class DetailsCvComponent implements OnInit {
-@Input() recipe : Recette;
+@Input() recipe : Recette[];
   constructor() { }
 
   ngOnInit() {
+    console.log(this.recipe)
   }
 
 }
