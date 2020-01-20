@@ -21,8 +21,8 @@ export class ListCVComponent implements OnInit {
     this.selectedRecipe.emit(recipe);
   }
 
-  selectionImg = (cover) => {
-    this.selectedCov.emit(cover);
-  }
+  // selectionImg = (cover) => {
+  //   this.selectedCov.emit(cover);
+  // }
 
 }

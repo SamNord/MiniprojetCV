@@ -9,10 +9,10 @@ import { Cover } from '../Models/image';
 })
 export class ItemCVComponent implements OnInit {
 @Input() recipe : Recette[];
-@Input() img : Cover[];
+// @Input() img : Cover[];
 
 @Output() selectedRecette = new EventEmitter();
-@Output() selectedImg = new EventEmitter();
+// @Output() selectedImg = new EventEmitter();
 
   constructor() { }
 
@@ -21,7 +21,7 @@ export class ItemCVComponent implements OnInit {
 
   selecRecip = () => {
     this.selectedRecette.emit(this.recipe);
-    this.selectedImg.emit(this.img);
+    // this.selectedImg.emit(this.img);
   }
 
 }
