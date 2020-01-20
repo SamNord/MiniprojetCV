@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AppComponent } from './app.component';
+import { DetailsCvComponent } from './details-cv/details-cv.component';
 
 
-const routes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

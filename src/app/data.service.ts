@@ -34,6 +34,8 @@ export class DataService {
   getFiche(): Observable<Recette[]> {
     return this.http.get<Recette[]>(this.urlBase);
   }
+
+  getFicheById(id : any): Observable<Recette[]> {
+    return this.http.get<Recette[]>(this.urlBase + '/' + id);
+  }
 }
-
-

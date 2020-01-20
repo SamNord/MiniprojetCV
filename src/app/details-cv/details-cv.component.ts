@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recette } from '../Models/recette';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DataService } from '../data.service';
+
 
 @Component({
   selector: 'app-details-cv',
@@ -8,10 +11,18 @@ import { Recette } from '../Models/recette';
 })
 export class DetailsCvComponent implements OnInit {
 @Input() recipe : Recette[];
-  constructor() { }
+  constructor(private activateRoute : ActivatedRoute,
+     private data : DataService,
+     private route : Router) { }
 
   ngOnInit() {
-    console.log(this.recipe)
+
+  }
+
+  seeDetail = (id) => {
+    console.log(id);
+    const link = ['fiche', id ];
+    this.route.navigate(link);
   }
 
 }
